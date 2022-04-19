@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +7,8 @@
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&display=swap');
-
-        body {
+        
+        body{
             overscroll-behavior: none;
             display: flex;
             flex-direction: column;
@@ -17,188 +16,153 @@
             margin: 0px;
             line-height: 2;
         }
-
-        #header {
+        #header{
             display: flex;
             flex-direction: column;
             max-height: 10%;
             max-width: 90%;
         }
-
-        #img {
+        #img{
+            size: cover;
             margin-top: 0px;
-            background-image: url("cof_img.jpg");
-            background-repeat: repeat-y;
-            width: 100%;
-            position: absolute;
+            max-width: 100%;
+            min-height: 100%;
+            position: fixed;
             z-index: -2;
         }
-
-        #content {
+        #content{
             color: white;
             min-width: 80%;
             display: flex;
             flex-direction: column;
             text-align: center;
-            align-items: center;
+            align-items:center;
         }
-
-        h1 {
+        h1{
             font-size: 3em;
         }
-
-        #survey-form {
+        #survey-form{
             padding: 2%;
-            min-width: 70%;
+            min-width:70%;
             max-width: 70%;
             background-color: rgb(28, 25, 25, 0.9);
             border-radius: 5px 5px 0px 0px;
         }
-
-        #label_input {
+        #label_input{
             display: flex;
             text-align: start;
-            justify-content: space-around;
+            justify-content:space-around;
             padding: 2%;
             flex-direction: column;
             min-width: 90%;
         }
-
-        #label_input>input,
-        #coffee {
+        #label_input > input, #coffee {
             height: 30px;
             border-radius: 5px;
-
+            
         }
-
-        textarea {
+        textarea{
             height: 100px;
         }
-
-        #submit {
+        #submit{
             min-width: 96%;
-            background-color: green;
+            background-color:green;
             line-height: 2;
         }
-
-        #submit:hover {
-            background-color: darkgreen;
+        #submit:hover{
+            background-color:darkgreen;
         }
-
-        @media(max-width:600px) {
-            #header {
+        @media(max-width:600px){
+            #header{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items:center;
             }
-
-            h1 {
-
-                font-size: 2em;
+            h1{
+                
+                font-size:2em;
             }
-
-            h3 {
-
-                max-width: 80%;
-                font-size: 1em;
+            h3{
+                
+                max-width:80%;
+                font-size:1em;
             }
-
-            #survey-form {
+            #survey-form{
                 font-size: 0.5em;
             }
-
-            #label_input>input,
-            #coffee {
+            #label_input > input, #coffee {
                 height: 20px;
             }
-
-            textarea {
+            textarea{
                 max-height: 70px;
             }
-
-            input,
-            select,
-            button,
-            textarea {
-                font-size: 1em
+            input, select, button, textarea{
+                font-size:1em
             }
         }
     </style>
 </head>
-
 <body>
-    <div id="img">
-        <div id="content">
-            <div id="header">
-                <h1 id="title"><b>Survey Form</b></h1>
-                <p id="description">Thank you for taking the time to help us improve the platform</p>
-            </div>
-            <form id="survey-form" action="">
-                <div id="label_input">
-                    <label id="name-label" for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name." required>
-                </div>
-                <div id="label_input">
-                    <label id="email-label" for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email." required>
-                </div>
-                <div id="label_input">
-                    <label id="number-label" for="number">Number</label>
-                    <input type="number" id="number" name="number" placeholder="000-000-0000" min="1000000000"
-                        max="9999999999">
-                </div>
-                <div id="label_input">
-                    <label for="age">Age</label>
-                    <input type="text" id="age" placeholder="Enter your age.">
-                </div>
-                <div id="label_input">
-                    <label for="name">Would you recommend our shop to a friend?</label>
-                    <div><input type="radio" id="Definitely" name="recomended" value="Definitely"><label
-                            for="Definitely">Definitely</label></div>
-                    <div><input type="radio" id="Maybe" name="recomended" value="Maybe"><label for="Maybe">Maybe</label>
-                    </div>
-                    <div><input type="radio" id="Not sure" name="recomended" value="Not sure"><label for="Not sure">Not
-                            sure</label></div>
-                </div>
-                <div id="label_input">
-                    <label for="coffee">What is your favorite coffee among all?</label>
-                    <select id="dropdown" name="coffee" id="coffee">
-                        <option value="none" selected disabled hidden>Select an Option</option>
-                        <option value="Cappuccino">Cappuccino</option>
-                        <option value="Latte">Latte</option>
-                        <option value="Mocha">Mocha</option>
-                        <option value="Americano">Americano</option>
-                    </select>
-                </div>
-                <div id="label_input">
-                    <label for="improve">What would you like to see improved? (Check all that apply)</label>
-                    <div><input type="checkbox" id="quality" value="quality"><label for="quality">Quality of
-                            beverage.</label></div>
-                    <div><input type="checkbox" id="delivery" value="delivery"><label for="delivery">On time
-                            delivery</label></div>
-                    <div><input type="checkbox" id="temperature" value="temperature"><label
-                            for="temperature">Temperature of beverage.</label></div>
-                    <div><input type="checkbox" id="pricing" value="pricing"><label for="pricing">Pricing</label></div>
-                    <div><input type="checkbox" id="technological_barrier" value="technological_barrier">Technological
-                        barrier</div>
-                </div>
-                <div id="label_input">
-                    <label for="satisfaction">How much are you satisfied with our service?</label>
-                    <div><input type="radio" id="excellent" name="satisfaction" value="excellent"><label
-                            for="excellent">Excellent</label></div>
-                    <div><input type="radio" id="c_better" name="satisfaction" value="c_better"><label
-                            for="c_better">Can be better</label></div>
-                    <div><input type="radio" id="neutral" name="satisfaction" value="neutral"><label
-                            for="neutral">Neutral</label></div>
-                    <div><input type="radio" id="bad" name="satisfaction" value="bad"><label for="bad">Bad</label></div>
-                </div>
-                <div id="label_input">
-                    <label for="textarea">Any comments or suggestions?</label>
-                    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="type here.."></textarea>
-                </div>
-                <div><button id="submit" type="submit">Submit</button></div>
-                </survey-form>
+    <img id="img" src="cof_img.jpg" alt="">
+    <div id="content">
+        <div id="header">
+            <h1 id="title"><b>Survey Form</b></h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
         </div>
+        <form id="survey-form" action="">
+            <div id="label_input">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name." required>
+            </div>
+            <div id="label_input">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email." required>
+            </div>
+            <div id="label_input">
+                <label id="number-label" for="number">Number</label>
+                <input type="number" id="number" name="number" placeholder="000-000-0000" min="1000000000" max="9999999999">
+            </div>
+            <div id="label_input">
+                <label for="age">Age</label>
+                <input type="text" id="age" placeholder="Enter your age.">
+            </div>
+            <div id="label_input">
+                <label for="name">Would you recommend our shop to a friend?</label>
+                <div><input type="radio" id="Definitely" name="recomended" value="Definitely"><label for="Definitely">Definitely</label></div>
+                <div><input type="radio" id="Maybe" name="recomended" value="Maybe"><label for="Maybe">Maybe</label></div>
+                <div><input type="radio" id="Not sure" name="recomended" value="Not sure"><label for="Not sure">Not sure</label></div>
+            </div>
+            <div id="label_input">
+                <label for="coffee">What is your favorite coffee among all?</label>
+                <select id="dropdown" name="coffee" id="coffee">
+                    <option value="none" selected disabled hidden>Select an Option</option>
+                    <option value="Cappuccino">Cappuccino</option>
+                    <option value="Latte">Latte</option>
+                    <option value="Mocha">Mocha</option>
+                    <option value="Americano">Americano</option>
+                </select>
+            </div>
+            <div id="label_input">
+                <label for="improve">What would you like to see improved? (Check all that apply)</label>
+                <div><input type="checkbox" id="quality" value="quality"><label for="quality">Quality of beverage.</label></div>
+                <div><input type="checkbox" id="delivery" value="delivery"><label for="delivery">On time delivery</label></div>
+                <div><input type="checkbox" id="temperature" value="temperature"><label for="temperature">Temperature of beverage.</label></div>
+                <div><input type="checkbox" id="pricing" value="pricing"><label for="pricing">Pricing</label></div>
+                <div><input type="checkbox" id="technological_barrier" value="technological_barrier">Technological barrier</div>
+            </div>
+            <div id="label_input">
+                <label for="satisfaction">How much are you satisfied with our service?</label>
+                <div><input type="radio" id="excellent" name="satisfaction" value="excellent"><label for="excellent">Excellent</label></div>
+                <div><input type="radio" id="c_better" name="satisfaction" value="c_better"><label for="c_better">Can be better</label></div>
+                <div><input type="radio" id="neutral" name="satisfaction" value="neutral"><label for="neutral">Neutral</label></div>
+                <div><input type="radio" id="bad" name="satisfaction" value="bad"><label for="bad">Bad</label></div>
+            </div>
+            <div id="label_input">
+                <label for="textarea">Any comments or suggestions?</label>
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="type here.."></textarea>
+            </div>
+            <div><button id="submit" type="submit">Submit</button></div>
+        </survey-form>
+    </div>
 </body>
-
 </html>
